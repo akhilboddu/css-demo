@@ -1,0 +1,244 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* CSS BOX MODEL */
+/* .box-1 {
+    background-color: red;
+    padding: 20px;
+    border: 20px solid yellow;
+    margin: 50px;
+    height: 200px;
+    width: 200px;
+}
+.box-2 {
+    background-color: blue;
+    padding: 20px;
+    border: 20px solid yellowgreen;
+    margin: 50px;
+    height: 200px;
+    width: 200px;
+} */
+
+/* DISPLAY BLOCK, INLINE, INLINE-BLOCK */
+/* .box{
+    min-height:100px;
+    background-color:green;
+    display:none;
+
+}
+.box2{
+    min-height:100px;
+    background-color:purple;
+    display:inline-block;
+} */
+
+
+/* FLEXBOX */
+/* .container {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexbox-item {
+    width:100px;
+    background-color:grey;
+    border: 2px black solid;
+    margin: 10px;
+}
+.flexbox-item-1 {
+    min-height: 50px;
+}
+.flexbox-item-2 {
+    min-height: 100px;
+}
+.flexbox-item-3 {
+    min-height: 150px;
+} */
+
+
+.grid-container {
+    margin: 10px;
+    height: 100vh;
+    display: grid;
+    /* grid-template-columns: 200px 100px; */
+    grid-template-columns: repeat(2, 200px);
+    /* grid-auto-rows: 150px; */
+    grid-auto-rows: minmax(150px, auto);
+    
+    /* grid-row-gap: 20px;
+    grid-column-gap: 20px; */
+    grid-gap: 50px;
+
+    /* grid-template-areas:
+        "header header"
+        "sidebar content"
+        "sidebar content"
+    ; */
+
+    justify-content: center;
+    -moz-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    align-content: center;
+}
+.grid-item {
+    background-color:grey;
+    border: 2px black solid;
+}
+.grid-item-1 {
+    /* grid-area: header; */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+    /* grid-column: 1 / 3; */
+    grid-column: 1 / -1;
+}
+.grid-item-2 {
+    /* grid-area: sidebar; */
+    grid-row: 2 / 4;
+}
+.grid-item-3 {
+    /* grid-area: content; */
+    grid-row: span 3;
+}
+.grid-item-6 {
+    /* grid-area: content; */
+    grid-column: span 2;
+}
+
+
+/* POSITION */
+/* .parent {
+    height: 200vh;
+    position: relative;
+    background-color: lightgreen;
+}
+.child-one {
+    padding: 10px;
+    background-color: red;
+    width:100%;
+}
+.child-two {
+    padding: 10px;
+    background-color: lightcoral;
+    position: sticky;
+    top:0;
+    position: fixed;
+    top: 50%;
+}
+.child-three {
+    padding: 10px;
+    background-color: lightgray;
+    position: sticky;
+    top:0;
+} */
+
+
+
+/* CSS UNITS */
+/* body {
+    margin: 12px;
+}
+
+.parent {
+    border: 2px black solid;
+    width: 500px;
+    margin-top: 10px;
+}
+.hundred-px {
+    width: 100px;
+    padding: 15px 0;
+    background-color: red;
+    margin-bottom: 10px;
+}
+.fifty-percent {
+    width: 50%;
+    padding: 15px 0;
+    background-color: red;
+    margin-bottom: 10px;
+}
+.parent .test {
+    background: yellow;
+}
+.fifty-vw {
+    width: 50vw;
+    padding: 15px 0;
+    background-color: red;
+    margin-bottom: 10px;
+}
+.fifty-vh {
+    height: 50vh;
+    padding: 15px 0;
+    background-color: red;
+    margin-bottom: 10px;
+} */
+
+
+/* .one-em {
+    font-size: 1em;
+}
+.one-rem {
+    font-size: 1rem;
+}
+
+.two-em {
+    font-size: 2em;
+}
+.two-rem {
+    font-size: 2rem;
+}
+
+.parent {
+    border: 2px black solid;
+    width: 500px;
+    margin-top: 10px;
+    font-size: 40px;
+} */
+
+
+.title {
+    font-size: 6rem;
+}
+.subtitle {
+    font-size: 3rem;
+}
+
+/* @media print {
+    body {
+        color: red;
+    }
+} */
+
+
+/* can use orientation and the comma as the or operator */
+@media (orientation: portrait) , (min-width: 600px) {
+    body {
+        background-color: red;
+    }
+}
+/* for mobile devices */
+@media all and (max-width: 480px) {
+    body {
+        color: red;
+    }
+    .title {
+        font-size: 4rem;
+    }
+    .subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+/* for tablets */
+@media (max-width: 768px) and (min-width: 480px) {
+    body {
+        color: blue;
+    }
+}
